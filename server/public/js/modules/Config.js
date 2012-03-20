@@ -24,7 +24,6 @@ define([ "modules/Api", "modules/Storage", "modules/Utils" ], function(Api, Stor
 
 		function getCurPage(){
 			var anchor = Utils.getAnchor();
-			console.log(anchor);
 			if(anchor != 'results'){
 				var curPage = Storage.get(pageStoreKey);
 				var mail = Storage.get(userStoreKey);
