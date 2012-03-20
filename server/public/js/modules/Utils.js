@@ -5,28 +5,45 @@ define([], function() {
 			return typeof localStorage != "undefined";
 		}
 		
-		function isPlaceholder(){
-			return 'placeholder' in document.createElement('input');
-		}
-		
-		function getAnchor(){
-			var hash = window.location.hash;
-			return hash.substring(1);
-		}
-		
 		function isMail(str){
 			if(str != null && str != ''){
 				return true;
 			}
 			return false;
 		}
+		
+		function retireve(eltId){
+			if(isLocalStrorage()){
+				return localStorage[eltId];
+			} else {
+			
+			}
+		}
+		
+		function persist(eltId, eltVal){
+			if(isLocalStrorage()){
+				localStorage[eltId] = eltVal;
+			} else {
+			
+			}
+		}
+		
+		function remove(eltId){
+			if(isLocalStrorage()){
+				localStorage.removeItem(eltId);
+			} else {
+			
+			}
+		}
 
 		return {
 			isLocalStrorage: isLocalStrorage,
-			isPlaceholder: isPlaceholder,
 			isMail: isMail,
-			getAnchor: getAnchor
+			persist: persist,
+			retireve: retireve,
+			remove: remove
 		};
 	})();
+	
 	return Utils;
 });

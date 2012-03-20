@@ -1,0 +1,25 @@
+
+#boxinfocontainer2 
+{
+	padding-top:40px;
+	padding-left:0;
+	width: 100%;
+	margin:auto;
+	margin:auto;
+	max-height:100%;
+	padding:20px;
+}
+#boxinfo2
+{
+
+	background:#EEEEEE;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	width: 80%;
+	font: 80%/120% Arial, Helvetica, sans-serif;
+	margin:auto;
+	padding:20px;
+	
+	
+}

@@ -1,20 +1,11 @@
 define([ "require_jquery", "modules/Api", "modules/Utils", "modules/Config" ], function($, Api, Utils, Config) {
 	var ResultsPage = (function() {
 		var config = Config.getInstance();
-		var pageId = 3;
-		var page = $('#page'+pageId);
+		var page = null;
 		
-		function start(cb_finalize){
-			if(!config.isPageBuild(pageId)){
-				config.buildPage(pageId);
-				
-				buildUI();
-				
-				page.find('.actions .logout').click(function()
-				{
-					cb_finalize('restart');
-				});
-			}
+		function start(block){
+			page = block;
+			buildUI();
 		}
 		
 		function buildUI(){
@@ -56,25 +47,17 @@ define([ "require_jquery", "modules/Api", "modules/Utils", "modules/Config" ], f
 				}
 			}
 			block.append('<div class="clear"></div>');
-
 			
 			$('.scrutin .infoscrutin').click(function(){
-				
-
 				window.open("info.html", "info", null);
 				return false;
 			});
-			//.slideUp()
-		}
-		
-		function getPage(){
-			return page;
 		}
 
 		return {
-			start: start,
-			getPage: getPage
+			start: start
 		};
 	})();
+	
 	return ResultsPage;
 });

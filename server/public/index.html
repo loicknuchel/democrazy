@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-		 <meta property="og:title" content="Democrazy"/>
-      <meta property="og:type" content="article"/>
-      <meta property="og:image" content="http://democrazy.fr/img/logo1024.png"/>
-      <meta property="og:url" content="http://democrazy.fr"/>
-      <meta property="og:site_name" content="democrazy">
+	<meta property="og:title" content="Democrazy"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:image" content="http://democrazy.fr/img/logo1024.png"/>
+    <meta property="og:url" content="http://democrazy.fr"/>
+    <meta property="og:site_name" content="democrazy">
 
-      <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-		  <meta name="viewport" content="width=device-width,initial-scale=1.0" /> 
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" /> 
 	<title>democrazy</title>
 
 	<!-- add font from google -->
@@ -22,6 +22,7 @@
 </head>
 <body>
 	<div id="page0" class="page" align="center" style="margin: auto;">
+		<div class="startBlock">login</div>
 		<img class="bgimage" src="img/carteelecbg.jpg"/>
 		<div class="UserIdf">
 			
@@ -46,74 +47,22 @@
 			<p style="margin:0; line-height:20pt;">
 			<a  style="font-size:11pt; line-height:20pt; background-color:transparent;" href="info.html" target="info">en savoir plus...</a>
 			<br>
-			<a  id="resultsLoginPage" style="line-height:20pt; font-size:11pt; background-color:transparent;" href="#" target="_self" >les résultats...</a>
+			<a  style="line-height:20pt; font-size:11pt; background-color:transparent;" href="results.html" target="_self" >les résultats...</a>
 		</p>
-			<!--<img  src="img/logo1.png"/>-->
-			<div class="logo"  >
-				<img class="letter" src="img/letter.jpg" style="width: 70px;" />
+			<div class="logo">
+				<a href="premier_tour.html"><img class="letter" src="img/letter.jpg" style="width: 70px; display: inline;" /></a>
 				<img class="urne" src="img/urne.png" style="width: 280px;" />
 			</div>
-			<!--<div class="share">
+			<div class="share">
 				<div class="fb-like facebook" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-href="https://www.facebook.com/Democrazy2012"></div><div id="fb-root" class="facebook"></div>
 				<div class="g-plusone" data-size="small"></div>
 				<a href="https://twitter.com/share" class="twitter-share-button" data-text="Je viens de voter sur" data-lang="fr" data-hashtags="voxe2012" data-url="http://democrazy.fr/index.html" data-via="democrazy2012" class="twitter">Tweeter</a>
 				<script type="text/javascript" src="https://apis.google.com/js/plusone.js">{lang: 'fr'}</script>
 				<script>(function(d,s,id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-			</div>-->
-		</div>
-		
-	</div>
-	<div id="page1" class="page" align="center" style="margin: auto; position:relative">
-		<div class="actions">
-			<a href="#" title="se déconnecter" alt="se déconnecter"  class="logout"></a>
-			<span class="customtitle">Scrutin à un tour</a>
-		</div>
-		<div class="title customtitle">
-			Pour quel candidat voteriez vous au premier tour ?
-		</div>
-		<div class="candidats" align="center">
-		</div>
-		
-			<div class="send">
-				<input type="submit" value="Envoyer" class="ui-button ui-widget ui-state-default ui-corner-all" />
-			</div>
-		<div class="footer" ></div>
-	</div>
-	<div id="page2" class="page" align="center" style="margin: auto;">
-		<div class="actions">
-			<a href="#" title="se déconnecter" alt="se déconnecter"  class="logout"></a>
-			<span class="customtitle">Méthode de Condorcet</a>
-		</div>
-		<div class="content-description">
-			<p class="title customtitle">
-				Classer les candidats par ordre de préférence décroissant
-			</p>
-		</div>
-		<ul id="orderCandidates">
-		</ul>
-		
-		<div class="send">
-			<input type="submit" value="Envoyer" class="ui-button ui-widget ui-state-default ui-corner-all" />
-		</div>
-
-		
-		<div class="footer" ></div>
-	</div>
-	<div id="page3" class="page" align="center" style="margin: auto;">
-		
-		<div class="actions">
-			<a href="#" title="accueil" alt="accueil"  class="logout"></a>
-			<span class="titlepage">Résultat</a>
-		</div>
-		<div class="container">
-			<span class="customtitle"></span>
-			<div class="result-container">
-		
 			</div>
 		</div>
-		<div class="footer" ></div>
+		
 	</div>
 </body>
 </html>

@@ -1,55 +1,33 @@
 
-define([ "require_jquery", "modules/LoginPage", "modules/PremierTourPage", "modules/OrderCandidatesPage", "modules/ResultsPage", "modules/Api", "modules/Config", "require_jqueryui" ], 
-function($, LoginPage, PremierTourPage, OrderCandidatesPage, ResultsPage, Api, Config) {
+define([ "require_jquery", "modules/LoginPage", "modules/PremierTourPage", "modules/OrderCandidatesPage", "modules/ResultsPage", "modules/Api", "modules/Utils", "modules/Config", "require_jqueryui" ], 
+function($, LoginPage, PremierTourPage, OrderCandidatesPage, ResultsPage, Api, Utils, Config) {
 	function App(){
 		var config = Config.getInstance();
-		//var candidates = null; 
-		var iduser = "";
+		var loginPage = 'login.html';
 		
-		function startApp() {
-			goPage(config.getCurPage());
+		function startLogin(block){
+			Utils.remove(config.getUserStoreKey());
+			LoginPage.start(block);
 		}
 		
-		function goPage(pageId){
-			$('.page').hide();
-			config.setCurPage(pageId);
-			if(pageId == 0)
-			{
-				LoginPage.getPage().show();
-				LoginPage.start(pageFinish);
-			} else if(pageId == 1){
-				PremierTourPage.getPage().show();
-				PremierTourPage.start(pageFinish);
-			} else if(pageId == 2){
-				OrderCandidatesPage.getPage().show();
-				OrderCandidatesPage.start(pageFinish);
-			} else if(pageId == 3){
-				ResultsPage.getPage().show();
-				ResultsPage.start(pageFinish);
+		function startPremierTour(block){
+			if(config.getUser() != null){
+				PremierTourPage.start(block);
 			} else {
-				alert('goPage ERROR : unknown page : '+pageId);
-				console.log('goPage ERROR : unknown page : '+pageId);
-				goPage(0);
+				location.href = loginPage;
 			}
 		}
 		
-		function pageFinish(result)
-		{
-
-			
-			
-			if(result == 'success'){
-				var curPage = config.getCurPage();
-				goPage(eval(eval(curPage)+1));
-			} else if(result == 'restart'){
-				goPage(0);
-			} else if(result == 'results'){
-				goPage(3);
+		function startOrderCandidates(block){
+			if(config.getUser() != null){
+				OrderCandidatesPage.start(block);
 			} else {
-				alert('pageFinish ERROR : unknown result : '+result);
-				console.log('pageFinish ERROR : unknown result : '+result);
-				goPage(0);
+				location.href = loginPage;
 			}
+		}
+		
+		function startResults(block){
+			ResultsPage.start(block);
 		}
 	
 		// Singleton !!!
@@ -58,7 +36,10 @@ function($, LoginPage, PremierTourPage, OrderCandidatesPage, ResultsPage, Api, C
 		}
 
 		return {
-			startApp: startApp
+			startLogin: startLogin,
+			startPremierTour: startPremierTour,
+			startOrderCandidates: startOrderCandidates,
+			startResults: startResults
 		}
 	}
 	App.instance = null;
