@@ -1,4 +1,4 @@
-define([ "require_jquery", "modules/Api", "modules/Config" ], function($, Api, Config) {
+define([ "require_jquery", "modules/Api", "modules/Utils", "modules/Config" ], function($, Api, Utils,Config) {
 	var OrderCandidatesPage = (function() {
 		var config = Config.getInstance();
 		var resultsPage = 'results.html';
@@ -25,7 +25,7 @@ define([ "require_jquery", "modules/Api", "modules/Config" ], function($, Api, C
 				block.append('<li id="'+candidates[i]['voxe_id']+'" class="ui-state-default">'
 					+'<img align="left"  src="'+candidates[i]['piclink72']+'" />'
 					+'<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>'
-					+'<div>'+candidates[i]['name']+'</div>'
+					+'<span class="orderCandidatesName">'+candidates[i]['name']+'</span>'
 				+'</li>');
 			}
 			block.sortable();
@@ -42,7 +42,14 @@ define([ "require_jquery", "modules/Api", "modules/Config" ], function($, Api, C
 			Api.listCandidatVote(buildIds(), config.getUser(), function(code){
 				if(code == 200){
 					alert('A Voté!');
-					location.href = resultsPage;
+					if(Utils.isLocalStrorage())
+					{
+						location.href = resultsPage;
+					}
+					else
+					{
+						location.href = encodeURI(resultsPage+"?"+config.getUserStoreKey()+"="+config.getUser());
+					}
 				} else {
 					alert('try again');
 				}

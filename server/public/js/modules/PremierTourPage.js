@@ -1,4 +1,4 @@
-define([ "require_jquery", "modules/Api", "modules/Config" ], function($, Api, Config) {
+define([ "require_jquery", "modules/Api", "modules/Utils","modules/Config" ], function($, Api,Utils, Config) {
 	var PremierTourPage = (function() {
 		var config = Config.getInstance();
 		var orderCandidatePage = 'order_candidates.html';
@@ -58,7 +58,15 @@ define([ "require_jquery", "modules/Api", "modules/Config" ], function($, Api, C
 				Api.premierTourVote(candidat.attr('id'), config.getUser(), function(code){
 					if(code == 200){
 						alert('A voté!');
-						location.href = orderCandidatePage;
+						if(Utils.isLocalStrorage())
+						{
+							location.href = orderCandidatePage;
+						}
+						else
+						{
+						
+							document.location.href = encodeURI(orderCandidatePage+"?"+config.getUserStoreKey()+"="+config.getUser());
+						}
 					} else {
 						alert('try again');
 					}

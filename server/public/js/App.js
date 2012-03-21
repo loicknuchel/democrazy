@@ -3,7 +3,7 @@ define([ "require_jquery", "modules/LoginPage", "modules/PremierTourPage", "modu
 function($, LoginPage, PremierTourPage, OrderCandidatesPage, ResultsPage, Api, Utils, Config) {
 	function App(){
 		var config = Config.getInstance();
-		var loginPage = 'login.html';
+		var loginPage = 'index.html';
 		
 		function startLogin(block){
 			Utils.remove(config.getUserStoreKey());
@@ -18,8 +18,10 @@ function($, LoginPage, PremierTourPage, OrderCandidatesPage, ResultsPage, Api, U
 			}
 		}
 		
-		function startOrderCandidates(block){
-			if(config.getUser() != null){
+		function startOrderCandidates(block)
+		{
+			
+			if(config.getUser() != null ){
 				OrderCandidatesPage.start(block);
 			} else {
 				location.href = loginPage;
