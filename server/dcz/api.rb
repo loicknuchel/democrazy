@@ -3,6 +3,7 @@ module Dcz; class Api < Sinatra::Base
   set(CFG[:sinatra_settings])
   mime_type(:json,"application/json")
   mime_type(:js,"text/javascript")
+  mime_type(:html,"text/html")
   configure{Ohm::connect(CFG[:redis])}
 
   before do
@@ -14,7 +15,7 @@ module Dcz; class Api < Sinatra::Base
     def jsonp(obj)
       json = obj.to_json
       if (cbk = params.delete("callback"))
-         content_type :js
+         content_type(:js)
          "#{cbk}(#{json})"
        else
          json
@@ -25,7 +26,9 @@ module Dcz; class Api < Sinatra::Base
   ASE::require_part %w{ in out }
 
   get("/") do
-    redirect("/index.html")
+    content_type(:html)
+    pf = CFG[:sinatra_settings][:public_folder]
+    String::from("#{pf}/index.html")
   end
 
 end end
