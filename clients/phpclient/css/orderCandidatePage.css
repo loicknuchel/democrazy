@@ -1,0 +1,20 @@
+
+#page2 #orderCandidates { cursor:move; font-family: Arial,Helvetica,sans-serif; font-size:9pt ; list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#page2 #orderCandidates li { margin: 0px; padding-top: 5px; font-size: 12px; height: 32px; vertical-align:center; }
+#page2 #orderCandidates li span:nth-child(2) { position: absolute; height:12px; margin-left: -1.3em; }
+#page2 #orderCandidates  div{ padding-top:5px;}
+#page2 #orderCandidates  img{ padding-left:15px; margin:0; height:32px; width:32px;}
+
+#page2 {
+}
+
+#page2 #orderCandidates {
+	padding:0px;
+	width: 280px;
+	margin: auto;
+}
+
+#page2 .send {
+	margin-top: 20px;
+	text-align: center;
+}
