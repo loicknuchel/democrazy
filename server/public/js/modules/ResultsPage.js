@@ -23,7 +23,7 @@ define([ "require_jquery", "modules/Api", "modules/Utils", "modules/Config" ], f
 			for(var i in results){
 				if(results[i]['results'][0] != null){
 					scrutin = '<div class="scrutin" id="'+results[i]['electionId']+'">'
-						+'<div class="name"><img src="img/info32.png" class="infoscrutin"/>'+results[i]['electionType']+'</div>'
+						+'<div class="name"><img src="img/info32.png" alt="en savoir plus..." alt="en savoir plus..." class="infoscrutin"/>'+results[i]['electionType']+'</div>'
 						+'<div class="winner"><img src="'+results[i]['results'][0]['piclink_anim']+'" /></div>'
 						+'<div class="resultats">';
 						var maxPc = 0;
@@ -52,6 +52,22 @@ define([ "require_jquery", "modules/Api", "modules/Utils", "modules/Config" ], f
 				window.open("info.html", "info", null);
 				return false;
 			});
+			
+			if (navigator.appName == 'Microsoft Internet Explorer')
+			{
+				setTimeout( function () 
+				{
+				
+            $(".winner").animate({
+                opacity: '0'
+            }, 3000);
+
+            
+          
+           
+        }, 3000);
+				//$(".winner").animate({opacity:0}, 600000); 
+			}
 		}
 
 		return {

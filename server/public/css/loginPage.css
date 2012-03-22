@@ -17,32 +17,43 @@
 }
 
 #page0 .share {
-	padding-left: 2%;
 	position: relative;
-	top: 0px;
-	left: 0px;
+	width:420px;
+	margin:auto;
+	padding:0;
 }
 
 .twitter{
-	top: 5px;
+	margin:0;
+	padding:0;
 }
 
 .facebook{
 	display: inline;
-	top: -4px;
+	margin:0;
+	padding:0;
 }
-
+.fb-like-div
+{
+	float:left;
+	margin:0;
+	padding:0;
+}
 .g-plusone{
 	display: inline;
-	top: -10px;
+	
 }
 
 #page0 .share a{
 	top: 7px;
 }
 
-
+#page0 .logo a {
+	border:0;
+	text-decoration:none;
+}
 #page0 .logo .letter {
+	border:0;
 	display: block;
 	position: relative;
 	top: 17px;
@@ -78,16 +89,20 @@
 }
 #page0 .UserIdf
 {
+	position:relative;
+	width:100%;
+	margin:auto;
+	/*
 	position:absolute;
 	top:10px;
 	left:0;
-	width:100%;
-	margin:auto;
+	
+	*/
 }
 
 #page0 .UserIdf div:nth-child(1)  div:nth-child(2) 
 {
-	background-color: #FFFFFF; filter:alpha(opacity=90);-moz-opacity:0.9;opacity: 0.9;
+	/*background-color: #FFFFFF; filter:alpha(opacity=90);-moz-opacity:0.9;opacity: 0.9;*/
 }
 #page0 .acroche
 {
@@ -96,6 +111,6 @@
 	font-size:19px;
 	line-height:26px;
 	padding-bottom:20px;
-	background-color: #FFFFFF; filter:alpha(opacity=70);-moz-opacity:0.7;opacity: 0.7;
+	/*background-color: #FFFFFF; filter:alpha(opacity=70);-moz-opacity:0.7;opacity: 0.7;*/
 
 }

@@ -115,6 +115,8 @@
 	z-index:999;
 }
 #page3 .result-container .scrutin .winner img {
+
+
 	-webkit-animation-name: rotateThis;
 	-webkit-animation-duration:5s;
 	-webkit-animation-iteration-count:1;
@@ -139,7 +141,10 @@
 	90% {-moz-transform:scale(1.0) rotate(720deg);}
 	to {-moz-transform:scale(0.0) rotate(0deg);}
 }
-
+#page3 .actions
+{
+	position:relative;
+}
 #page3 .actions .logout
 {
 	float:left;
@@ -147,7 +152,13 @@
 	width:40px;
 	height:40px;
 }
+#page3 
+{
+	overflow:auto !important;
+	
+}
 #page3 .container
 {
+	position:relative;
 	padding-top:10px;
 }

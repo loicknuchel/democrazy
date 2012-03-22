@@ -38,7 +38,8 @@ input.rounded:focus {
 }
 
 #page1, #page2, #page3 {
-	position:relative;
+	position:fixed;
+	width:100%;
 	background: #B5B3B4 url('../img/bgpage.jpg') repeat-y top center ;
  	padding-bottom:20px;
 }
