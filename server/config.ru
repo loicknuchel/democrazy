@@ -4,7 +4,12 @@ def api
   Dcz::Api.new
 end
 
+def www
+  Dcz::Www.new
+end
+
 app = Rack::URLMap.new({
+  "/www/" => www,
   "/" => api,
 })
 

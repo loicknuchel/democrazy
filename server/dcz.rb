@@ -2,7 +2,7 @@ module Dcz
 
   require "as-extensions"
 
-  ASE::need %w{ ohm ohm/contrib rufus/verbs sinatra/base time-ago-in-words }
+  ASE::need %w{ ohm ohm/contrib rufus/verbs sinatra/base time-ago-in-words pony }
 
   root = File.expand_path(File.dirname(__FILE__))
 
@@ -26,6 +26,6 @@ module Dcz
 
   }
 
-  ASE::require_part %w{ api helpers ohm voxe }
+  ASE::require_part %w{ api helpers ohm voxe www }
 
 end
