@@ -11,12 +11,31 @@ module Dcz; class Www < Sinatra::Base
     content_type(:html)
   end
 
-  ASE::require_part %w{ mail }
+  TPL = {}
+
+  # Helpers
+
+  def render(tpl,h={})
+    unless TPL[tpl]
+      TPL[tpl] = String::from(File.join(CFG[:path][:tpl],"#{tpl}.mustache"))
+    end
+    Mustache.render(TPL[tpl],h)
+  end
+
+  def vote_p2012
+    Vote.get_by_voxe_id("4f16fe2299c7a10001000012")
+  end
+
+  def cd_info
+    vote_p2012.candidates.map_m(:info)
+  end
+
+  # / Helpers
+
+  ASE::require_part %w{ mail pages }
 
   get("/") do
-    content_type(:html)
-    pf = CFG[:sinatra_settings][:public_folder]
-    String::from("#{pf}/index.html")
+    render(:index)
   end
 
 end end

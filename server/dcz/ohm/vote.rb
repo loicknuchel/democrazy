@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module Dcz class Vote
 
   attribute(:name,String); index(:name)
@@ -308,6 +310,66 @@ module Dcz class Vote
 
   def solve_condorcet_cached
     [[condorcet_winner,100]]
+  end
+
+  # RESULTS
+
+  def scoremap_to_results(scoremap)
+    scoremap.map do |x|
+      x.first.info.merge(score: x.second,unit: "")
+    end
+  end
+
+  def normalized_scoremap_to_results(scoremap)
+    s = scoremap.inject(0){|s,x| s+x.second}
+    scoremap.map do |x|
+      x.first.info.merge(score: ((100*x.second.to_f)/s).round,unit: "%")
+    end
+  end
+
+  def results_info
+    uninominal_one_turn = {
+      electionType: "Système actuel, 1er tour",
+      electionId: 1,
+      results: normalized_scoremap_to_results(solve_uninominal_one_turn_bias),
+    }
+
+    uninominal_two_turns = {
+      electionType: "Système actuel, 2e tour",
+      electionId: 2,
+      results: normalized_scoremap_to_results(solve_uninominal_two_turns_bias),
+    }
+
+    elimination = {
+      electionType: "Scrutin par élimination",
+      electionId: 3,
+      results: scoremap_to_results(solve_elimination),
+    }
+
+    borda = {
+      electionType: "Méthode de Borda",
+      electionId: 4,
+      results: scoremap_to_results(solve_borda),
+    }
+
+    ago = (Time.at condorcet_generation).ago_in_words
+
+    condorcet = {
+      electionType: "Méthode de Condorcet (updated #{ago})",
+      electionId: 5,
+      results: normalized_scoremap_to_results(solve_condorcet_cached),
+    }
+
+    r = {
+      results: [
+        uninominal_one_turn,
+        uninominal_two_turns,
+        elimination,
+        borda,
+        condorcet
+      ],
+      nb_votes: opinions.all.size,
+    }
   end
 
 end end
