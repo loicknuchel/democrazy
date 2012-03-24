@@ -1,8 +1,8 @@
 define([ "require_jquery" ], function($) {
 	var Api = (function() {
-		var apiUrl = "http://democrazy.fr/4f16fe2299c7a10001000012/";
+		var apiUrl = "/4f16fe2299c7a10001000012/api/";
 		var staticMode = false;
-		
+
 		// public
 		function getCandidates(callback) {
 			if(staticMode){

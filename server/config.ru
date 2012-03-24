@@ -9,8 +9,8 @@ def www
 end
 
 app = Rack::URLMap.new({
-  "/www/" => www,
-  "/" => api,
+  "/api/" => api,
+  "/" => www,
 })
 
 run app
