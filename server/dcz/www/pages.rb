@@ -1,13 +1,13 @@
 module Dcz class Www
 
-  get("/info/?") do |x|
+  get("/info/?") do
     render(:info)
   end
 
-  get("/results/?") do |x|
+  get("/results/?") do
     r = ""
-    vote_p2012.results_info.each do |rs|
-      maxPc = rs[:results].map{|x| x.score}.max
+    vote_p2012.results_info[:results].each do |rs|
+      maxPc = rs[:results].map{|x| x[:score]}.max
       r += <<-EOD
              <div class="scrutin" id="#{rs[:electionId]}">
              <div class="name"><img src="img/info32.png" class="infoscrutin"/>#{rs[:electionType]}</div>
@@ -30,7 +30,7 @@ module Dcz class Www
     render(:results,{results: r})
   end
 
-  get("/first_turn/?") do |x|
+  get("/first_turn/?") do
     r = ""
     k = 0
     cd_info.each do |cd|
@@ -56,7 +56,7 @@ module Dcz class Www
     render(:first_turn,{candidates: r})
   end
 
-  get("/order_candidates/?") do |x|
+  get("/order_candidates/?") do
     r = ""
     cd_info.each do |cd|
       r += <<-EOD
@@ -67,7 +67,6 @@ module Dcz class Www
              </li>
            EOD
     end
-    vote_p2012.candidates.each.map_m(:info) do |cd|
     render(:order_candidates,{candidates: r})
   end
 

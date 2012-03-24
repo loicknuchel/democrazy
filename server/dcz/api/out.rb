@@ -7,7 +7,7 @@ module Dcz class Api
   end
 
   get("/:vid/results/?") do |vid|
-    jsonp(Vote.get_by_voxe_id(vid)results_info)
+    jsonp(Vote.get_by_voxe_id(vid).results_info)
   end
 
 end end

@@ -12,6 +12,11 @@ module Dcz
 
     debug: true,
 
+    path: {
+      root: root,
+      tpl: File.join(root,"tpl"),
+    },
+
     redis: {
       path: "/tmp/redis.sock",
     },
