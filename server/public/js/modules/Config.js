@@ -4,8 +4,7 @@ define([ "modules/Utils" ], function(Utils) {
 		// params
 		var userStoreKey = 'user';
 
-		function getUser()
-		{
+		function getUser(){
 			var mail = Utils.retireve(userStoreKey);
 			if(mail != null && mail != ''){
 				return {mail: mail};
