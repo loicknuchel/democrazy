@@ -22,7 +22,7 @@ module Dcz class Opinion
         confirmed: false,
       })
       r.save
-      r.send_cmail
+      r.send_cmail if r.valid_email?
       r
     end
 
