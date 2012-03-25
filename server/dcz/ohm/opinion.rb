@@ -21,7 +21,9 @@ module Dcz class Opinion
         confirmation_id: String::rand_alphanum(16),
         confirmed: false,
       })
-      r.save; r
+      r.save
+      r.send_cmail
+      r
     end
 
     def all_complete
