@@ -368,7 +368,7 @@ module Dcz class Vote
         borda,
         condorcet
       ],
-      nb_votes: complete_opinions.all.size,
+      nb_votes: complete_opinions.size,
     }
   end
 
