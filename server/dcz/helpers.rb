@@ -39,4 +39,13 @@ module Dcz; class << self
     true
   end
 
+  def get_opinion_by_mail(m)
+    r = []
+    Dcz::Opinion.all.each do |x|
+      r << x if x.email == m
+    end
+    raise if r.size > 1
+    r.first
+  end
+
 end end
