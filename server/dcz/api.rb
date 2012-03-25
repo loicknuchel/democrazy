@@ -25,10 +25,4 @@ module Dcz; class Api < Sinatra::Base
 
   ASE::require_part %w{ in out }
 
-  get("/") do
-    content_type(:html)
-    pf = CFG[:sinatra_settings][:public_folder]
-    String::from("#{pf}/index.html")
-  end
-
 end end

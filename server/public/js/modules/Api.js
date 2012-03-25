@@ -1,6 +1,6 @@
 define([ "require_jquery" ], function($) {
 	var Api = (function() {
-		var apiUrl = "/4f16fe2299c7a10001000012/api/";
+		var apiUrl = "/api/4f16fe2299c7a10001000012/";
 		var staticMode = false;
 
 		// public
