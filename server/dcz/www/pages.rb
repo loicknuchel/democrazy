@@ -6,7 +6,8 @@ module Dcz class Www
 
   get("/results/?") do
     r = ""
-    vote_p2012.results_info[:results].each do |rs|
+    rst = vote_p2012.results_info
+    rst[:results].each do |rs|
       maxPc = rs[:results].map{|x| x[:score]}.max
       r += <<-EOD
              <div class="scrutin" id="#{rs[:electionId]}">
@@ -27,7 +28,7 @@ module Dcz class Www
       r += '</div></div>'
     end
     r += '<div class="clear"></div>'
-    render(:results,{results: r})
+    render(:results,{results: r,nbvotes: rst[:nb_votes]})
   end
 
   get("/first_turn/?") do
