@@ -28,7 +28,7 @@ module Dcz class Www
       r += '</div></div>'
     end
     r += '<div class="clear"></div>'
-    render(:results,{results: r,nbvotes: rst[:nb_votes]})
+    render(:results,{results: r,nb_votes: rst[:nb_votes]})
   end
 
   get("/first_turn/?") do
