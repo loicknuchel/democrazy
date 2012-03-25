@@ -74,7 +74,7 @@ module Dcz class Opinion
   end
 
   def send_cmail
-    link = "http://democrazy.fr/www/confirm-vote/#{confirmation_id}"
+    link = "http://democrazy.fr/confirm-vote/#{confirmation_id}"
     body = [
       "Bonjour,",
       "vous recevez cet email en raison de votre participation à l'expérience",
@@ -82,6 +82,8 @@ module Dcz class Opinion
       "",
       "Pour valider votre vote, merci de cliquer sur ce lien :",
       link,
+      "",
+      "Merci de votre intérêt pour notre projet,",
       "",
       "-- ",
       "L'équipe de Democrazy"
