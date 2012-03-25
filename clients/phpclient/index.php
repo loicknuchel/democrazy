@@ -23,7 +23,6 @@
 <body>
 	<div id="page0" class="page" align="center" style="margin: auto;">
 		<div class="startBlock">login</div>
-		<img class="bgimage" src="img/carteelecbg.jpg"/>
 		<div class="UserIdf">
 			
 			<div class="acroche">Vous élisez,<br>les règles du jeu décident.</div>
