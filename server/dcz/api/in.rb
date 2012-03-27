@@ -6,6 +6,7 @@ module Dcz class Api
     opinion.set_fstvote(params[:candidate])
     if !params[:email].blank?
       opinion.set_email(params[:email])
+      opinion.send_cmail if opinion.valid_email?
     end
     jsonp({code: 200})
   end

@@ -22,7 +22,6 @@ module Dcz class Opinion
         confirmed: false,
       })
       r.save
-      r.send_cmail if r.valid_email?
       r
     end
 
@@ -71,8 +70,8 @@ module Dcz class Opinion
   end
 
   def complete?
-     # confirmed && fstvote && order.size == Candidate.all.size
-     fstvote && order.size == Candidate.all.size
+     confirmed && fstvote && order.size == Candidate.all.size
+     #fstvote && order.size == Candidate.all.size
   end
 
   def send_cmail
@@ -92,7 +91,7 @@ module Dcz class Opinion
     ].join("\n")
     Pony.mail({
       to: email,
-      from: "team@democrazy.fr",
+      from: %{"Democrazy" <team@democrazy.fr>},
       subject: "Confirmez votre vote sur Democrazy",
       body: body,
       charset: "UTF-8",
