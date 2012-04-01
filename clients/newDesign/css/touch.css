@@ -1,0 +1,18 @@
+
+#sortable { list-style-type: none; margin: 0; padding: 0; }
+#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+#sortable li span { position: absolute; margin-left: -1.3em; }
+
+#resizable { width: 150px; height: 150px; padding: 0.5em; }
+#resizable h3 { text-align: center; margin: 0; }
+
+#draggable { width: 100px; height: 100px; padding: 0.25em; margin: 1em; background:#fff; border:1px solid #ccc; color:#000;}
+#droppable { width: 150px; height: 150px; padding: 0.25em; margin: 1em; background:#ccc; border:1px solid #999; color:#000;}
+#draggable p,
+#droppable p {
+  margin:0;
+}
+
+#ball #slider {
+  margin-top:90px;
+}

@@ -1,21 +1,21 @@
 
-#archidede {
+.home #archidede {
 	padding: 10px;
 	margin-bottom: 20px;
 }
 
-#widgets .button-container {
+.home #widgets .button-container {
 	display: block;
 	text-align: center;
 }
 
-#widgets .button-container a {
+.home #widgets .button-container a {
 	margin-top: 5px;
 	font-size: 16px;
 	padding: 5px 10px;
 }
 
-#widgets .vote .button-container a {
+.home #widgets .vote .button-container a {
 	font-size: 24px;
 	padding: 10px 20px;
 }

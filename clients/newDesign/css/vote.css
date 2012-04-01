@@ -1,0 +1,40 @@
+
+.home.vote {
+
+}
+
+.home.vote .etape {
+	display: none;
+}
+
+.home.vote .etape.no0 {
+	display: block;
+}
+
+.home.vote .etape.no0 #voteForm {
+
+}
+
+.home.vote .etape.no0 #voteForm .valid {
+	
+}
+
+.home.vote .etape.no0 #voteForm .img {
+	text-align: center;
+	margin: 20px 0px 0px 0px;
+}
+
+.home.vote .etape .candidats {
+	margin: 30px;
+	//border: 1px solid black;
+}
+.home.vote .etape .candidats .title {
+	margin: auto;
+	text-align: center;
+}
+
+.home.vote .etape .valid {
+	margin: auto;
+	text-align: center;
+}
+
