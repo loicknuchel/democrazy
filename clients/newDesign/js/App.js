@@ -39,7 +39,7 @@ define([ "libs/require_jquery", "modules/Vote", "modules/Api" ], function($, Vot
 					scrutinHTML = '<div class="grid col-300'+fit+'">'
 						+ '<div class="scrutin" id="'+election['electionId']+'">'
 							+ '<div class="name">'
-								+ '<h3><a href="scrutins.html#'+election['electionId']+'" target="'+election['electionId']+'" title="Explications du scrutin"><img src="img/info32.png" /></a> '+election['electionType']+'</h3>'
+								+ '<h3><a href="scrutins.html#scrutin'+election['electionId']+'" target="'+election['electionId']+'" title="Explications du scrutin"><img src="img/info32.png" /></a> '+election['electionType']+'</h3>'
 							+ '</div>'
 							+ '<div class="results">'
 								+ '<ul>';
