@@ -28,7 +28,12 @@ padding: 20px;
 text-align: left;
 }
 
-
+.captionBg {
+	background: white url(../img/caption2.png) no-repeat top right;
+}
+.carteBg {
+	//background: white url(../img/carteelecbg2.jpg) no-repeat top center;
+}
 
 .candidats .candidat {
 	float: left;

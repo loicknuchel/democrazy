@@ -1443,15 +1443,9 @@ form div {
 }
 
 .top-menu li a {
-	border-left:1px solid #ccc;
 	color:#333;
 	font-size:11px;
-	padding: 0 8px;
-}
-
-.top-menu > li:first-child > a {
-	border-left:none;
-	padding:0 8px 0 0;
+	padding: 0 2px;
 }
 
 .top-menu li a:hover {

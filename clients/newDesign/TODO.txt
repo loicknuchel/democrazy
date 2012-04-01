@@ -1,15 +1,11 @@
 
-	- libs :
-		* http://mustache.github.com/
-		* http://lesscss.org/
-	- responsive design (recherches : templates, framework, sample)
-		* http://responsivedesign.fr/veille-responsive-web-design-templates-articles-grilles/
-		* http://www.getskeleton.com/
-		* http://cssgrid.net/
-	
+	TODO :
+		- faire les textes sur les scrutins : scrutins.html
+		- faire une revue de tous les textes
+		- générer coté serveur les résultats (cf js/App.js buildResultUI() : ligne 23)
+		- trouver une bonne police pour les titres
+
+		
 	Partenariats possibles :
-		* http://veritablevote.fr/
-		* http://www.slate.fr/story/42115/primaire-socialiste-jugement-majoritaire
-		* http://www.slate.fr/story/43791/primaire-ps-jugement-majoritaire
-		* http://par-la-fenetre.net/2011/07/01/presidentielles-2012-au-jugement-majoritaire/
+		* http://www.votedevaleur.org/co/votedevaleur.html
 		* 

@@ -17,50 +17,65 @@
 	<script type="text/javascript" src="./js/libs/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="./js/libs/responsive-modernizr.js"></script>
 	<script data-main="js/boot.js" src="js/require.js"></script>
+	<style>
+	#playground {
+		background: red;
+		margin: 20px;
+		width: 600px;
+		height: 600px;
+	}
+	
+.scene {
+	-webkit-perspective: 1000px;
+	width: 600px;
+	height: 340px;
+}
+.objet {
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.face {
+	position: absolute;
+	left: 165px;
+	top: 15px;
+}
+.face.face1 { width: 200px; height: 200px; background: blue; -webkit-transform: translateZ(150px); }
+.face.face2 { width: 200px; height: 200px; background: lime; -webkit-transform: translateZ(-150px); }
+.face.face3 { width: 200px; height: 200px; background: red; -webkit-transform: translateX(150px) rotateX(90deg); }
+.face.face4 { width: 200px; height: 200px; background: grey; -webkit-transform: translateZ(-150px) rotateY(-90deg); }
+.face.face5 { width: 200px; height: 200px; background: black; -webkit-transform: translateZ(150px) rotateY(90deg); }
+.face.face6 { width: 200px; height: 200px; background: yellow; -webkit-transform: translateZ(-150px) rotateY(-90deg); }
+
+.scene .objet:hover
+{
+	-webkit-animation: rotate3d7 linear infinite 14s;
+}
+@-webkit-keyframes rotate3d7
+{
+	to { -webkit-transform: rotateX(360deg) rotateY(720deg) rotateZ(1080deg); }
+}
+
+
+scene2 .objet {
+	-webkit-perspective: 1000px;
+}
+.scene2 .objet:hover
+{
+	-webkit-animation: flip linear infinite 2s;
+}
+@-webkit-keyframes flip
+{
+	from { -webkit-transform: rotateY(0deg); }
+	to { -webkit-transform: rotateY(360deg); }
+}
+	</style>
 </head>
-<body class="home vote blog">
+<body class="blog">
 	<div id="container" class="hfeed">
 		<div id="header">
-			<ul id="menu-top" class="top-menu">
-				<!-- <li class="twitter-icon"><a href="#"><img src="./img/social/twitter-icon.png" alt="Twitter"></a></li>
-				<li class="facebook-icon"><a href="#"><img src="./img/social/facebook-icon.png" alt="Facebook"></a></li>
-				<li class="google-plus-icon"><a href="#"><img src="./img/social/googleplus-icon.png" alt="Google Plus"></a></li> -->
-				<li>
-					<div class="g-plusone" ></div>
-					<script type="text/javascript">
-					  window.___gcfg = {
-						lang: 'fr-FR'
-					  };
-
-					  (function() {
-						var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-						po.src = 'https://apis.google.com/js/plusone.js';
-						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-					  })();
-					</script>
-				</li>
-				<li>
-					<a href="http://twitter.com/share" class="twitter-share-button" data-text="Découvrez les scrutins alternatifs et leurs résultats avec" data-url="http://democrazy.fr/" data-via="democrazy2012" data-hashtags="fr2012" data-lang="fr">Tweet</a>
-					<script id="deferedjs" type="text/javascript">
-						var b = document.createElement('script');
-						b.type = 'text/javascript';
-						b.src = ('http://platform.twitter.com/widgets.js');
-						var a=document.getElementById("deferedjs");
-						a.parentNode.insertBefore(b,a);
-					</script>
-				</li>
-				<li>
-					<div id="fb-root"></div>
-					<script>(function(d, s, id) {
-					  var js, fjs = d.getElementsByTagName(s)[0];
-					  if (d.getElementById(id)) return;
-					  js = d.createElement(s); js.id = id;
-					  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=287376221312294";
-					  fjs.parentNode.insertBefore(js, fjs);
-					}(document, 'script', 'facebook-jssdk'));</script>
-					<div class="fb-like-div"><div class="fb-like" data-href="https://www.facebook.com/Democrazy2012" data-send="true" data-layout="button_count" data-width="150" data-show-faces="true" data-font="arial"></div>
-				</li>
-			</ul>
 			<div id="logo">
 				<a href="./"><img src="./img/logo1024.png" alt="logo" style="width: 100px;"></a>
 			</div><!-- end of #logo -->
@@ -75,58 +90,40 @@
 				<li id="menu-item-713" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-713"><a href="./scrutins.html">Scrutins</a></li>
 			</ul>
 		</div>
-        
-	    <div id="wrapper" class="clearfix">
-			<div class="startBlock">mailSender</div>
-			
-			<div id="featured" class="grid col-940 etape no0">
-				<div class="grid col-460 carteBg">
-					<h1 class="featured-title">Voter</h1>                    
-					<h2 class="featured-subtitle"></h2>            
-					<p>
-						Pour être certains que le vote est bien associé à une personne, nous avons besoin de votre mail pour continuer.<br/>
-					</p>            
-				</div>
-				<div id="featured-elt" class="grid col-460 fit">
-					<form id="voteForm" class="widget">
-						<div class="mail">
-							<label>Entrez votre mail :</label>
-							<input type="text" name="mail" placeholder="Votre mail" />
+		<div id="wrapper" class="clearfix">
+			<div id="content" class="grid col-620">
+				
+				
+				<div id="playground">
+					<div class="scene">
+						<div class="objet">
+							<div class="face face1"></div>
+							<div class="face face2"></div>
+							<div class="face face3"></div>
+							<div class="face face4"></div>
+							<div class="face face5"></div>
+							<div class="face face6"></div>
 						</div>
-						<div class="valid">
-							<input type="submit" value="Valider" />
-						</div>
-						<div class="img">
-							<img src="./img/logo1.png" />
-						</div>
-					</form>
-				</div>
-			</div>
-			
-			<div id="featured" class="grid col-940 etape no1">
-				<div class="candidats">
-					<div class="title">
-						Pour qui voterez vous au premier tour ?
 					</div>
-					<div class="clear"></div>
-				</div>
-				<div class="valid">
-					<a href="#" class="button blue">Voter</a>
-				</div>
-			</div>
-			
-			<div id="featured" class="grid col-940 etape no2">
-				<div class="candidats">
-					<div class="title">
-						Classez les candidats par ordre de préférence décroissante :
+					
+					<div class="scene2">
+						<div class="objet">
+							<div class="face face1"></div>
+						</div>
 					</div>
-					<ul id="orderCandidates">
-					</ul>
 				</div>
-				<div class="valid">
-					<a href="#" class="button blue">Voter</a>
-				</div>
-			</div>
+				
+				
+				
+			</div><!-- end of #content -->
+			<!--<div id="widgets" class="grid col-300 fit">
+				<div class="widget-title">Sites</div>
+				<ul>
+					<li><a href="#quelcandidat">Quel candidat</a></li>
+					<li><a href="#monprogramme2012">Mon Programme 2012</a></li>
+					<li><a href="#voxe">Voxe</a></li>
+				</ul>
+			</div>--><!-- end of #widgets -->    
 		</div><!-- end of #wrapper -->
     </div><!-- end of #container -->
 
