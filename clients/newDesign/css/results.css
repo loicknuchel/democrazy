@@ -71,7 +71,11 @@ margin-bottom: 5px;
 .home.results #widgets .scrutin .results ul li .bar .data {
 	float: left;
 	height: 100%;
-	background: red;
+	background: #ED2E25;
+	border-radius: 0px 6px 6px 0px;
+	box-shadow: 4px 4px 12px #aaa;
+	border-right: #555 solid 1px;
+	border-bottom: #555 solid 1px;
 }
 .home.results #widgets .scrutin .results ul li .bar .before {
 	position: absolute;

@@ -1646,15 +1646,11 @@ ul.sub-menu .current_page_item a {
 /* =Sub Header Menu
 -------------------------------------------------------------- */
 .sub-header-menu {
-	-webkit-border-bottom-right-radius: 6px;
-	-webkit-border-bottom-left-radius: 6px;
-	-moz-border-radius-bottomright: 6px;
-	-moz-border-radius-bottomleft: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 	background-color:#fff;
 	border:1px solid #d6d6d6;
-	border-top:none;
-	border-bottom-right-radius: 6px;
-	border-bottom-left-radius: 6px;
 	clear:both;
 	margin:0 auto;
 }
