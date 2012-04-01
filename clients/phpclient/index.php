@@ -56,7 +56,7 @@
 			<div class="share">
 				<div class="fb-like facebook" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-href="https://www.facebook.com/Democrazy2012"></div><div id="fb-root" class="facebook"></div>
 				<div class="g-plusone" data-size="small"></div>
-				<a href="https://twitter.com/share" class="twitter-share-button" data-text="Je viens de voter sur" data-lang="fr" data-hashtags="voxe2012" data-url="http://democrazy.fr/index.php" data-via="democrazy2012" class="twitter">Tweeter</a>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-text="Je viens de voter sur" data-lang="fr" data-hashtags="voxe2012" data-url="http://democrazy.fr/" data-via="democrazy2012" class="twitter">Tweeter</a>
 				<script type="text/javascript" src="https://apis.google.com/js/plusone.js">{lang: 'fr'}</script>
 				<script>(function(d,s,id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

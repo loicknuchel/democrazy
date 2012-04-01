@@ -1,0 +1,13 @@
+
+#header #title {
+	float: left;
+	margin-left: 40px;
+}
+
+#header #title h1 {
+	margin: 1em 0 .5em;
+}
+
+#header #title h2 {
+	margin: 0px;
+}
