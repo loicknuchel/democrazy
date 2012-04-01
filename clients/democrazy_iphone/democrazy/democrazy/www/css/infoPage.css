@@ -1,0 +1,51 @@
+
+#boxinfocontainer2 
+{
+	display:inline-block;
+	margin:auto;
+	width:98%;
+	overflow-y:auto;
+}
+.infointro
+{
+	padding-top: 10px; font-weight: bold; font-size: 14px;
+	margin: 3px 0px 0px 0px;
+	
+}
+.txt_type_vote_info
+{
+	margin: 0; 
+	padding: 0px 0px 15px 0px; 
+	display: none;
+	max-width:500px !important ;
+	font-size:11px;
+	background:#F3F3F3;
+				
+}
+.titre_type_vote_info
+{
+		font-size:13px;
+	
+	background: #DDDDDD;
+	margin: 5px 0px 15px 0px;
+	padding: 5px 0px 0px 5px;
+	cursor: pointer;
+	font-weight: bold;
+	max-width:500px !important ;
+	-moz-transform:rotate(-1deg); -moz-box-shadow:5px 5px 10px #000000;
+	  -webkit-transform:rotate(-1deg); -webkit-box-shadow:5px 5px 10px #000000;
+	  transform:rotate(-1deg); box-shadow:5px 5px 10px #000000; 
+}
+
+.titre_type_vote_info:hover 
+{
+-moz-transform:rotate(-2deg); -moz-box-shadow:10px 10px 20px #EEEEEE;
+  -webkit-transform:rotate(-2deg); -webkit-box-shadow:10px 10px 20px #EEEEEE;
+  transform:rotate(-2deg); box-shadow:10px 10px 20px #EEEEEE; 
+}
+  
+#boxinfo2
+{
+
+	
+}
