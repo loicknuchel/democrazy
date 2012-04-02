@@ -1,0 +1,11 @@
+
+	TODO :
+		- faire les textes sur les scrutins : scrutins.html
+		- faire une revue de tous les textes
+		- générer coté serveur les résultats (cf js/App.js buildResultUI() : ligne 23)
+		- trouver une bonne police pour les titres
+
+		
+	Partenariats possibles :
+		* http://www.votedevaleur.org/co/votedevaleur.html
+		* 

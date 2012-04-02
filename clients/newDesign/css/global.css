@@ -1,0 +1,125 @@
+
+.startBlock {
+	display: none;
+}
+
+#header #title {
+	float: left;
+	margin-left: 40px;
+}
+
+#header #title h1 {
+	margin: 1em 0 .5em;
+}
+
+#header #title h2 {
+	margin: 0px;
+}
+
+.widget {
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+background-color: #F9F9F9;
+border: 1px solid #D6D6D6;
+display: block;
+margin: 0 0 20px;
+padding: 20px;
+text-align: left;
+}
+
+.captionBg {
+	background: white url(../img/caption2.png) no-repeat top right;
+}
+.carteBg {
+	//background: white url(../img/carteelecbg2.jpg) no-repeat top center;
+}
+
+.candidats .candidat {
+	float: left;
+	position:relative;
+	cursor: pointer;
+	width: 180px;
+	height: 72px;
+	margin: 5px 5px 5px 5px;
+	padding: 5px 10px 5px 5px;
+	background-color: #F6F7F9;
+	border: 1px solid #F6F7F9;
+}
+.candidats .candidat.selected {
+	background-color: #D3DAE8;
+}
+.candidats .candidat:hover {
+	border: 1px solid #D3DAE8;
+}
+.candidats .candidat .name {
+	margin: 5px 0 0 60px;
+	font-weight: 300;
+}
+.candidats .candidat div.pic {
+	display: inline-block;
+	float: left;
+}
+.candidats .candidat div.pic {
+	width: 72px;
+	height: 72px;
+}
+.candidats .candidat.active div.pic {
+	background-position: 0px 0px;
+}
+.candidats .candidat div.pic {
+	background-position: 0px -50px;
+}
+.candidats .candidat .infocandidatdiv a {
+	position: static;
+	padding: 0px;
+}
+.candidats .candidat .infocandidat {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	height: 34px;
+	width: 34px;
+	border: 0;
+}
+
+#orderCandidates {
+	cursor: move;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 9pt;
+	list-style-type: none;
+	margin: auto;
+	max-width: 300px;
+}
+#orderCandidates li {
+	margin: 0px;
+	padding-top: 5px;
+	font-size: 12px;
+	height: 32px;
+	vertical-align: center;
+}
+#orderCandidates img {
+	padding-left: 15px;
+	margin: 0;
+	height: 32px;
+	width: 32px;
+}
+#orderCandidates li span:nth-child(2) {
+	position: absolute;
+	height: 12px;
+	margin-left: -1.3em;
+}
+#orderCandidates div {
+	padding-top: 5px;
+}
+
+
+#appstores {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	z-index: 2;
+}
+
+
+
