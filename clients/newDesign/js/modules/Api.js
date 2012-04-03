@@ -2,7 +2,7 @@
 define([ "libs/require_jquery" ], function($) {
 	var Api = (function() {
 		var apiUrl = "http://democrazy.fr/api/4f16fe2299c7a10001000012/";
-		var staticMode = true;
+		var staticMode = false;
 		var test = 0;
 		
 		// public

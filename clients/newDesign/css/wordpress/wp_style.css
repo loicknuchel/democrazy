@@ -248,13 +248,13 @@ img {
 /* =Links
 -------------------------------------------------------------- */
 a {
-	color:#444;
+	color:#666;
+	font-style: italic;
 	font-weight:400;
 	text-decoration:none;
 }
 
 a:hover {
-	color:#444;
 	text-decoration:underline;
 }
 
