@@ -18,7 +18,7 @@
 	<script type="text/javascript" src="./js/libs/responsive-modernizr.js"></script>
 	<script data-main="js/boot.js" src="js/require.js"></script>
 </head>
-<body class="home results blog">
+<body class="home vote blog">
 	<div id="container" class="hfeed">
 		<div id="header">
 			<ul id="menu-top" class="top-menu">
@@ -77,12 +77,55 @@
 		</div>
         
 	    <div id="wrapper" class="clearfix">
-			<div class="startBlock">results</div>
-			<div class="grid col-940 header-container">
-				<h1 class="title">Résultats :</h1>
+			<div class="startBlock">mailSender</div>
+			
+			<div id="featured" class="grid col-940 etape no0">
+				<div class="grid col-460 carteBg">
+					<h1 class="featured-title">Voter</h1>                    
+					<h2 class="featured-subtitle"></h2>            
+					<p>
+						Pour être certains que le vote est bien associé à une personne, nous avons besoin de votre mail pour continuer.<br/>
+					</p>            
+				</div>
+				<div id="featured-elt" class="grid col-460 fit">
+					<form id="voteForm" class="widget">
+						<div class="mail">
+							<label>Entrez votre mail :</label>
+							<input type="text" name="mail" placeholder="Votre mail" />
+						</div>
+						<div class="valid">
+							<input type="submit" value="Valider" />
+						</div>
+						<div class="img">
+							<img src="./img/logo1.png" />
+						</div>
+					</form>
+				</div>
 			</div>
 			
-			<div id="widgets" class="scrutin-container">
+			<div id="featured" class="grid col-940 etape no1">
+				<div class="candidats">
+					<div class="title">
+						Pour qui voterez vous au premier tour ?
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="valid">
+					<a href="#" class="button blue">Voter</a>
+				</div>
+			</div>
+			
+			<div id="featured" class="grid col-940 etape no2">
+				<div class="candidats">
+					<div class="title">
+						Classez les candidats par ordre de préférence décroissante :
+					</div>
+					<ul id="orderCandidates">
+					</ul>
+				</div>
+				<div class="valid">
+					<a href="#" class="button blue">Voter</a>
+				</div>
 			</div>
 		</div><!-- end of #wrapper -->
     </div><!-- end of #container -->

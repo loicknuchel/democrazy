@@ -1,67 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta property="og:title" content="Democrazy"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:image" content="http://democrazy.fr/img/logo1024.png"/>
-    <meta property="og:url" content="http://democrazy.fr"/>
-    <meta property="og:site_name" content="democrazy">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
-    <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<title>Democrazy - présentation</title>
 
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>democrazy</title>
-
-  <!-- add font from google -->
-  <link href='http://fonts.googleapis.com/css?family=Cutive&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="./css/style.css">
-  <script data-main="js/boot.js" src="js/require.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<script type="text/javascript" src="./js/libs/jquery.js" style="color: rgb(0, 0, 0); "></script>
+	<script type="text/javascript" src="./js/libs/jquery.skitter.min.js"></script>
+	<script type="text/javascript" src="./js/libs/jquery.animate-colors-min.js"></script>
+	<script type="text/javascript" src="./js/libs/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="./js/libs/responsive-modernizr.js"></script>
+	<script data-main="js/boot.js" src="js/require.js"></script>
 </head>
-<body>
-  <div id="page0" class="page" align="center" style="margin: auto;">
-    <div class="startBlock">login</div>
-    <div class="UserIdf">
+<body class="home blog">
+	<div id="container" class="hfeed">
+		<div id="header">
+			<ul id="menu-top" class="top-menu">
+				<!-- <li class="twitter-icon"><a href="#"><img src="./img/social/twitter-icon.png" alt="Twitter"></a></li>
+				<li class="facebook-icon"><a href="#"><img src="./img/social/facebook-icon.png" alt="Facebook"></a></li>
+				<li class="google-plus-icon"><a href="#"><img src="./img/social/googleplus-icon.png" alt="Google Plus"></a></li> -->
+				<li>
+					<div class="g-plusone" ></div>
+					<script type="text/javascript">
+					  window.___gcfg = {
+						lang: 'fr-FR'
+					  };
 
-      <div class="acroche">Vous élisez,<br>les règles du jeu décident.</div>
+					  (function() {
+						var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+						po.src = 'https://apis.google.com/js/plusone.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					  })();
+					</script>
+				</li>
+				<li>
+					<a href="http://twitter.com/share" class="twitter-share-button" data-text="Découvrez les scrutins alternatifs et leurs résultats avec" data-url="http://democrazy.fr/" data-via="democrazy2012" data-hashtags="fr2012" data-lang="fr">Tweet</a>
+					<script id="deferedjs" type="text/javascript">
+						var b = document.createElement('script');
+						b.type = 'text/javascript';
+						b.src = ('http://platform.twitter.com/widgets.js');
+						var a=document.getElementById("deferedjs");
+						a.parentNode.insertBefore(b,a);
+					</script>
+				</li>
+				<li>
+					<div id="fb-root"></div>
+					<script>(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=287376221312294";
+					  fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));</script>
+					<div class="fb-like-div"><div class="fb-like" data-href="https://www.facebook.com/Democrazy2012" data-send="true" data-layout="button_count" data-width="150" data-show-faces="true" data-font="arial"></div>
+				</li>
+			</ul>
+			<div id="logo">
+				<a href="./"><img src="./img/logo1024.png" alt="logo" style="width: 100px;"></a>
+			</div><!-- end of #logo -->
+			<div id="title">
+				<h1>Démo<span>crazy</span></h1>
+				<h2>Et si les électeurs ne choisissaient pas vraiment ?</h2>
+				<!--
+					cc @melenchon2012 @EvaJoly @dupontaignan @Villepin ; @dupontaignan @leclown @AgoraExMachina @epelboin
+				-->
+			</div>
+			<!--<ul class="menu">
+				<li class="current_page_item"><a href="./Responsive Demo_files/Responsive Demo.htm" title="Home">Home</a></li>
+				<li class="page_item page-item-501"><a href="http://themeid.com/demo/responsive/clearing-floats/">Clearing Floats</a></li>
+				<li class="page_item page-item-174">
+					<a href="http://themeid.com/demo/responsive/level-1/">Level 1</a>
+					<ul class="children">
+						<li class="page_item page-item-173">
+							<a href="http://themeid.com/demo/responsive/level-1/level-2/">Level 2</a>
+							<ul class="children">
+								<li class="page_item page-item-172"><a href="http://themeid.com/demo/responsive/level-1/level-2/level-3/">Level 3</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="page_item page-item-146"><a href="http://themeid.com/demo/responsive/lorem-ipsum/">Lorem Ipsum</a></li>
+				<li class="page_item page-item-675">
+					<a href="http://themeid.com/demo/responsive/page-templates/">Page Templates</a>
+					<ul class="children">
+						<li class="page_item page-item-698"><a href="http://themeid.com/demo/responsive/page-templates/blog/">Blog</a></li>
+						<li class="page_item page-item-700"><a href="http://themeid.com/demo/responsive/page-templates/blog-summary/">Blog Summary</a></li>
+						<li class="page_item page-item-694"><a href="http://themeid.com/demo/responsive/page-templates/content-sidebar/">Content/Sidebar</a></li>
+						<li class="page_item page-item-705"><a href="http://themeid.com/demo/responsive/page-templates/contentsidebar-half-page/">Content/Sidebar Half Page</a></li>
+						<li class="page_item page-item-696"><a href="http://themeid.com/demo/responsive/page-templates/full-width-page/">Full Width Page</a></li>
+						<li class="page_item page-item-707"><a href="http://themeid.com/demo/responsive/page-templates/landing-page/">Landing Page</a></li>
+						<li class="page_item page-item-691"><a href="http://themeid.com/demo/responsive/page-templates/sidebar-content/">Sidebar/Content</a></li>
+						<li class="page_item page-item-702"><a href="http://themeid.com/demo/responsive/page-templates/sidebar-content-half-page/">Sidebar/Content Half Page</a></li>
+						<li class="page_item page-item-746"><a href="http://themeid.com/demo/responsive/page-templates/sitemap/">Sitemap</a></li>
+					</ul>
+				</li>
+				<li class="page_item page-item-155"><a href="http://themeid.com/demo/responsive/page-with-comments/">Page with comments</a></li>
+				<li class="page_item page-item-156"><a href="http://themeid.com/demo/responsive/page-with-comments-disabled/">Page with comments disabled</a></li>
+				<li class="page_item page-item-143">
+					<a href="http://themeid.com/demo/responsive/parent-page/">Parent page</a>
+					<ul class="children">
+						<li class="page_item page-item-144"><a href="http://themeid.com/demo/responsive/parent-page/child-page-1/">Child page 1</a></li>
+						<li class="page_item page-item-145"><a href="http://themeid.com/demo/responsive/parent-page/child-page-2/">Child page 2</a></li>
+					</ul>
+				</li>
+			</ul>-->
+			<ul id="menu" class="sub-header-menu captionBg">
+				<li id="menu-item-710" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-710"><a href="./">Accueil</a></li>
+				<li id="menu-item-711" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-711"><a href="./vote">Voter</a></li>
+				<li id="menu-item-712" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-712"><a href="./results">Résultats</a></li>
+				<li id="menu-item-713" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-713"><a href="./scrutins">Scrutins</a></li>
+			</ul>
+		</div>
+        
+	    <div id="wrapper" class="clearfix">
+			<div id="featured" class="grid col-940">
+				<div class="grid col-540 carteBg">
+					<h1 class="featured-title">Qui choisit ?</h1>                    
+					<h2 class="featured-subtitle">Quel pouvoir a réellement un électeur ?</h2>            
+					<p>
+						Tous les 5 ans nous votons pour désigner le président de la République.
+						Quel est le véritable poids de notre vote ? Quelle est l'influence du mode de scrutin ?
+						Comme on le voit ici, le mode de scrutin peut avoir une grande influence sur le résultat d'une l'élection.
+						Cette situation théorique peut-elle réellement se produire avec de vrais votes ?<br/>
+						<br/>
+						C'est ce que nous expérimentons avec Démocrazy !!!<br/>
+						Nous comptons sur vous pour expérimenter ces scrutins.
+					</p>            
+				</div>
+				<div id="featured-elt" class="grid col-380 fit">
+					<div id="archidede">
+						<iframe width="420" height="315" src="http://www.youtube.com/embed/B2JvW8ma9Vc" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<div class="call-to-action">
+						<a href="vote" class="button silver">Votez</a>
+						<!--
+						<a href="#" class="blue button">Votez</a>
+						<a href="#" class="red button">Votez</a>
+						<a href="#" class="orange button">Votez</a>
+						<a href="#" class="green button">Votez</a>
+						<a href="#" class="purple button">Votez</a>
+						<a href="#" class="pink button">Votez</a>
+						<a href="#" class="brick button">Votez</a>
+						<a href="#" class="gold button">Votez</a>
+						<a href="#" class="brown button">Votez</a>
+						<a href="#" class="silver button">Votez</a>
+						<a href="#" class="gray button">Votez</a>
+						<a href="#" class="black button">Votez</a>-->
+					</div>
+				</div>
+			</div><!-- end of #content-home -->
+		
+			<div id="widgets" class="home-widgets">
+				<div class="grid col-300 infos">
+					<div class="widget-title-home"><h3>Informez vous</h3></div>
+					<p>
+						Quels sont les modes de scrutin que nous analysons ? Quelles sont leurs différences ?<br/>
+						Comparez ces scrutins et voyez ce que chacun d'eux favorise.
+						<span class="button-container">
+							<a href="scrutins" class="button blue">Informations sur les scrutins</a>
+						</span>
+					</p>
+				</div>
+				<div class="grid col-300 vote">
+					<div class="widget-title-home"><h3>Votez !</h3></div>
+					<p>
+						Pour que nous puissions vous donner des résultats pertinents, nous avons besoin de vous !!
+						<span class="button-container">
+							<a href="vote" class="button silver">Votez</a>
+						</span>
+					</p>
+				</div>
+				<div class="grid col-300 fit results">
+					<div class="widget-title-home"><h3>Consultez les résultats</h3></div>
+					<p>
+						C'est bien beau tout ça, mais qu'est-ce que ça donne ??<br/>
+						L'expérience est-elle conforme à la théorie avancée ici ?
+						<span class="button-container">
+							<a href="results" class="button red">Voir les résultats</a>
+						</span>
+					</p>
+				</div>
+			</div>
+		</div><!-- end of #wrapper -->
+    </div><!-- end of #container -->
 
-
-      <div>Pour voter, entrer votre mail<br><input class="rounded" type="text" name="mail" placeholder="Votre mail" /></div>
-      <div class="send" style="padding-bottom:10px;">
-        <input type="submit" value="Envoyer" class="ui-button ui-widget ui-state-default ui-corner-all" />
-      </div>
-      <div align="center" class="ptttxt">
-        <br>
-        <font class="titre">Democrazy est une expérimentation de différents modes de scrutins</font><br>
-          &bull; Scrutin à un tour &bull;<br>
-          &bull; Scrutin majoritaire à deux tours (système actuel) &bull;<br>
-          &bull; Scrutin par élimination &bull;<br>
-          &bull; Scrutin plurinominal majoritaire (dit de Borda) &bull;<br>
-          &bull; Méthode de Condorcet &bull;<br>
-
-      </div>
-
-      <p style="margin:0; line-height:20pt;">
-      <a  style="font-size:11pt; line-height:20pt; background-color:transparent;" href="info" target="info">en savoir plus...</a>
-      <br>
-      <a  style="line-height:20pt; font-size:11pt; background-color:transparent;" href="results" target="_self" >les résultats...</a>
-    </p>
-      <div class="logo">
-        <a href="first_turn"><img class="letter" src="img/letter.jpg" style="width: 70px; display: inline;" /></a>
-        <img class="urne" src="img/urne.png" style="width: 280px;" />
-      </div>
-      <div class="share">
-        <div class="fb-like facebook" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-href="https://www.facebook.com/Democrazy2012"></div><div id="fb-root" class="facebook"></div>
-        <div class="g-plusone" data-size="small"></div>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Je viens de voter sur" data-lang="fr" data-hashtags="voxe2012" data-url="http://democrazy.fr" data-via="democrazy2012" class="twitter">Tweeter</a>
-        <script type="text/javascript" src="https://apis.google.com/js/plusone.js">{lang: 'fr'}</script>
-        <script>(function(d,s,id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </div>
-    </div>
-
-  </div>
+	<div id="footer" class="clearfix">
+		<div id="footer-wrapper">
+			<div class="grid col-620">
+				<ul id="menu-foot" class="footer-menu">
+					<li id="menu-item-715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-715"><a href="other">La campagne autrement</a></li>
+					<li id="menu-item-717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-717"><a href="about">Plus d'informations</a></li>
+				</ul>
+			</div>
+			<div class="grid col-300 fit">
+				<ul class="social-icons">
+					<!-- <li class="twitter-icon">		<a href="#"><img src="./img/social/twitter-icon.png" 		alt="Twitter"></a></li> -->
+					<!-- <li class="facebook-icon">		<a href="#"><img src="./img/social/facebook-icon.png" 		alt="Facebook"></a></li> -->
+					<!-- <li class="linkedin-icon">		<a href="#"><img src="./img/social/linkedin-icon.png" 		alt="LinkedIn"></a></li> -->
+					<!-- <li class="youtube-icon">		<a href="#"><img src="./img/social/youtube-icon.png" 		alt="YouTube"></a></li> -->
+					<!-- <li class="stumble-upon-icon">	<a href="#"><img src="./img/social/stumble-upon-icon.png" 	alt="YouTube"></a></li> -->
+					<!-- <li class="rss-feed-icon">		<a href="#"><img src="./img/social/rss-feed-icon.png" 		alt="RSS Feed"></a></li> -->
+					<!-- <li class="google-plus-icon">	<a href="#"><img src="./img/social/googleplus-icon.png" 	alt="Google Plus"></a></li> -->
+				</ul>
+			</div>
+			<!--<div class="grid col-300 copyright">
+				© 2012<a href="./Responsive Demo_files/Responsive Demo.htm" title="Responsive Demo"> Responsive Demo</a>
+			</div>--><!-- end of .copyright -->
+			<!--<div class="grid col-300 scroll-top"><a href="http://themeid.com/demo/responsive/#scroll-top" title="scroll to top">↑</a></div>
+			<div class="grid col-300 fit powered">
+				<a href="http://themeid.com/responsive-theme" title="Responsive Theme">Responsive Theme</a> powered by <a href="http://wordpress.org/" title="WordPress">WordPress</a>
+			</div>--><!-- end .powered -->
+		</div><!-- end #footer-wrapper -->
+	</div><!-- end #footer -->
+	<div id="appstores">
+		<!-- <a href="" target="_blank" original-title=""><img alt="App-store" src="./img/stores/app-store.png"></a> -->
+		<a href="https://play.google.com/store/apps/details?id=com.democrazy" title="Application Android" target="_blank" original-title=""><img alt="Android-market" src="./img/stores/android-market.png"></a>
+	</div>
+	
+	<script type="text/javascript" src="./js/libs/jquery.form.js"></script>
+	<script type="text/javascript" src="./js/scripts.js"></script>
+	<script type="text/javascript" src="./js/responsive-scripts.js"></script>
+	<script type="text/javascript" src="./js/responsive-plugins.js"></script>
 </body>
 </html>

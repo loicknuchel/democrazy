@@ -18,7 +18,7 @@
 	<script type="text/javascript" src="./js/libs/responsive-modernizr.js"></script>
 	<script data-main="js/boot.js" src="js/require.js"></script>
 </head>
-<body class="home results blog">
+<body class="blog">
 	<div id="container" class="hfeed">
 		<div id="header">
 			<ul id="menu-top" class="top-menu">
@@ -75,15 +75,73 @@
 				<li id="menu-item-713" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-713"><a href="./scrutins">Scrutins</a></li>
 			</ul>
 		</div>
-        
-	    <div id="wrapper" class="clearfix">
-			<div class="startBlock">results</div>
-			<div class="grid col-940 header-container">
-				<h1 class="title">Résultats :</h1>
-			</div>
-			
-			<div id="widgets" class="scrutin-container">
-			</div>
+		<div id="wrapper" class="clearfix">
+			<div id="content" class="grid col-620 carteBg">
+				<div id="scrutin1">
+					<h1>Scrutin à un seul tour</h1>
+					<div class="post-entry">
+						<p>
+							C'est un scrutin très simple. Chaque électeur possède une voix et doit choisir un candidat. Le candidat ayant obtenu le plus de voix est élu.<br/>
+							<a target="scrutin1" href="http://fr.wikipedia.org/wiki/Scrutin_uninominal_majoritaire_%C3%A0_un_tour">Scrutin uninominal à un tour</a>
+						</p>
+					</div>
+				</div>
+				<div id="scrutin2">
+					<h1>Scrutin majoritaire à deux tours</h1>
+					<div class="post-entry">
+						<p>
+							C’est le système actuel prévu pour l'élection présidentielle française.
+							Chaque électeur possède un voix et désign un candidat. En cas de majorité absolue, le candidat est élu.
+							Sinon, un deuxième tour à lieu entre les deux premiers candidats du premier tour.<br/>
+							Dans Democrazy, on demande aux internautes de désigner spécifiquement afin de tester ce scénario sans influencer les électeurs dans l’expérimentation.<br/>
+							<a target="scrutin2" href="http://fr.wikipedia.org/wiki/Scrutin_uninominal_majoritaire_%C3%A0_deux_tours">Scrutin uninominal à deux tour</a>
+						</p>
+					</div>
+				</div>
+				<div id="scrutin3">
+					<h1>Scrutin par élimination</h1>
+					<div class="post-entry">
+						<p>
+							Le candidat qui obtient le moins de suffrages est éliminé. Ses voix sont alors reportées sur d’autres candidats, selon la préférence des électeurs. Et ainsi de suite.
+							En pratique, il n’y a pas besoin d’effectuer plusieurs tours.<br/>
+							Ainsi, dans Democrazy, nous utilisons le classement effectué par chaque électeur pour désigner le vainqueur dans ce mode de scrutin.
+						</p>
+					</div>
+				</div>
+				<div id="scrutin4">
+					<h1>Scrutin par la méthode Borda</h1>
+					<div class="post-entry">
+						<p>
+							On choisit un nombre n inférieur ou égal au nombre de candidats.
+							Chaque électeur construit alors une liste de n candidats par ordre de préférence.
+							Au premier de la liste, on attribue n points, au second n - 1 points, et ainsi de suite, le nième de la liste se voyant attribuer 1 point.
+							Le score d'un candidat est la somme de tous les points qui lui ont été attribués.
+							Le ou les candidats dont les scores sont les plus élevés remportent les élections.<br/>
+							<a target="scrutin4" href="http://fr.wikipedia.org/wiki/M%C3%A9thode_Borda">Scrutin de Borda</a>
+						</p>
+					</div>
+				</div>
+				<div id="scrutin5">
+					<h1>Scrutin par la méthode de Condorcet</h1>
+					<div class="post-entry">
+						<p>
+							Le vainqueur dans un vote de Condorcet est le candidat qui remporte tous les match 1 contre 1 avec l'ensemble des candidats.
+							Il est donc possible que cette méthode ne donne pas de vainqueur. Pour résoudre les cas de conflit, d'autres méthodes sont alors appliquées à la suite.<br/>
+							<a target="scrutin5" href="http://fr.wikipedia.org/wiki/M%C3%A9thode_Condorcet">Scrutin de Condorcet</a>
+						</p>
+					</div>
+				</div>
+			</div><!-- end of #content -->
+			<div id="widgets" class="grid col-300 fit">
+				<div class="widget-title">Scrutins</div>
+				<ul>
+					<li><a href="#scrutin1">Scrutin à un seul tour</a></li>
+					<li><a href="#scrutin2">Scrutin majoritaire à deux tours</a></li>
+					<li><a href="#scrutin3">Scrutin par élimination</a></li>
+					<li><a href="#scrutin4">Scrutin par la méthode Borda</a></li>
+					<li><a href="#scrutin5">Scrutin par la méthode de Condorcet</a></li>
+				</ul>
+			</div><!-- end of #widgets -->    
 		</div><!-- end of #wrapper -->
     </div><!-- end of #container -->
 

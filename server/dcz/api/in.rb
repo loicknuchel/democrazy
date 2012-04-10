@@ -13,7 +13,12 @@ module Dcz class Api
 
   get("/:vid/opinion/:oid/set_order/?") do |vid,oid|
     vote = Vote.get_by_voxe_id(vid)
-    opinion = vote.get_opinion(oid) || vote.add_opinion(oid)
+    opinion = vote.get_opinion(oid)
+    if opinion.blank?
+      sleep 1
+      opinion = vote.get_opinion(oid)
+    end
+    raise if opinion.blank?
     opinion.set_order(params[:candidates].split(","))
     jsonp({code: 200})
   end

@@ -1,0 +1,22 @@
+
+.home #archidede {
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.home #widgets .button-container {
+	display: block;
+	text-align: center;
+}
+
+.home #widgets .button-container a {
+	margin-top: 5px;
+	font-size: 16px;
+	padding: 5px 10px;
+}
+
+.home #widgets .vote .button-container a {
+	font-size: 24px;
+	padding: 10px 20px;
+}
+

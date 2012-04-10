@@ -1,3 +1,5 @@
 *.DS_Store
 *Thumbs.db
 democrazy.keystore
+server/log/
+server/pids/
