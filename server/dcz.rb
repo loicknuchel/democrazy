@@ -3,7 +3,8 @@ module Dcz
   require "as-extensions"
 
   ASE::need %w{
-    mustache ohm ohm/contrib pony rufus/verbs sinatra/base time-ago-in-words
+    csv mustache ohm ohm/contrib pony rufus/verbs
+    sinatra/base time-ago-in-words
   }
 
   root = File.expand_path(File.dirname(__FILE__))

@@ -4,6 +4,7 @@ module Dcz; class Www < Sinatra::Base
   mime_type(:json,"application/json")
   mime_type(:js,"text/javascript")
   mime_type(:html,"text/html")
+  mime_type(:csv,"text/csv")
   configure{Ohm::connect(CFG[:redis])}
 
   before do
@@ -32,7 +33,7 @@ module Dcz; class Www < Sinatra::Base
 
   # / Helpers
 
-  ASE::require_part %w{ mail pages }
+  ASE::require_part %w{ export mail pages }
 
   get("/") do
     render(:index)
